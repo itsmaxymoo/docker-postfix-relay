@@ -2,9 +2,9 @@ name: Test
 
 on:
   push:
-    branches: [master, develop]
+    branches: [main, dev]
   pull_request:
-    branches: [master, develop]
+    branches: [main, dev]
 
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.API_GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout without token
         if: github.event_name == 'pull_request'
@@ -31,6 +31,6 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: cycjimmy/semantic-release-action@v3
         with:
-          semantic_version: 17.4
+          semantic_version: 21.1.1
         env:
-          GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
