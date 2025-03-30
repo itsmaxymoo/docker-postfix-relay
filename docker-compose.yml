@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: postfix_relay
     ports:
-    - "2500:25"
+    - "25:25"
     env_file:
       - .env
     restart: always
