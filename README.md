@@ -1,6 +1,6 @@
 # docker-postfix-relay-postfix
 
-A fork of https://github.com/itsmaxymoo/docker-postfix-relay which does the following:
+A fork of juanluisbaptiste/docker-postfix which does the following:
 
 * Update dependencies
 * Remove dependency on custom image; replace with alpine.
